@@ -33,7 +33,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "scp -i /home/coditas/Downloads/server-vpn.pem **/target/*.war ubuntu@${params.tomcat_prod}:/home/ubuntu/latest/webapps"
+                        sh "scp -i ~/.ssh/id_rsa **/target/*.war ubuntu@${params.tomcat_prod}:/home/ubuntu/latest/webapps"
                     }
                 }
             }
