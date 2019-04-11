@@ -27,7 +27,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "sudo cp **/target/*.war /home/coditas/apache-tomcat-8.5.39-staging/webapps"
+                        sh "cp -r  **/target/*.war /home/coditas/apache-tomcat-8.5.39-staging/webapps"
                     }
                 }
 
