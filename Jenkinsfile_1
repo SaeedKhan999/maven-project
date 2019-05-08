@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "saeedkhan999/jenkinsrepo"
+    registry = "saeedkhan999/tomcatwebapp"
     registryCredential = 'dockerhub'
     dockerImage = ''
     }
