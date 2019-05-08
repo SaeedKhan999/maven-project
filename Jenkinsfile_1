@@ -1,0 +1,15 @@
+pipeline {
+    environment {
+    registry = "saeedkhan999/jenkinsrepo"
+    registryCredential = 'dockerhub'
+    }
+    agent any
+
+    stages{
+        stage('push'){
+            steps{
+                sh "docker push tomcatwebapp:${env.BUILD_ID}"
+               }
+            }
+          }
+       }
